@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!--ICONS-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="dashboard" class="dashboard-container">
+    <div class="navbar">
+        <div class="logo-and-title">
+            <img src="Aro.png" alt="Aro Logo">
+            <h2>ARO</h2>
+        </div>
+        <button id="all-projects-btn" class="nav-button"><span class="material-symbols-outlined">
+          home
+          </span> All Projects</button>
+        <button id="your-projects-btn" class="nav-button"> <span class="material-symbols-outlined">
+          person
+          </span> Your Projects</button>
+        <button id="shared-with-you-btn" class="nav-button"><span class="material-symbols-outlined">
+          group
+          </span> Shared with You</button>
+        <button id="archived-btn" class="nav-button"><span class="material-symbols-outlined">
+          archive
+          </span> Archived</button>
+        <button id="trash-btn" class="nav-button"> <span class="material-symbols-outlined">
+          delete
+          </span> Trash</button>
+        <button id="new-project" style="text-align:center; margin-left: 0px;">+ New</button>
+        <input type="file" id="upload-pdf" accept="application/pdf" style="display:none;">
+    </div>
+    <div class="content">
+        <div class="header">
+            <div id="search-bar">
+                <div class="search-icon"></div>
+                <input type="text" placeholder="Search in Aro">
+              </div> 
+            <div class="user-info">
+              <div class="user-box" id="user-box">
+                <div class="avatar">C</div>
+                <div class="user-details">
+                  <strong>Cole Gawin</strong>
+                  <p>colegawin@gmail.com</p>
+                </div>
+                <div class="dropdown-menu">
+                  <a href="#" id="logout-btn">Log out</a>
+              </div>
+              </div>                                
+            </div>              
+          </div>
+          <div class="project-title" id="project-title" style="margin-bottom: 25px;">All Projects</div> 
+          <div class="view-options">
+            <button id="view-cards" style="padding: 5px; margin-right: -10px;"><span class="material-symbols-outlined" style="right: -5px; top: 4px">
+              grid_view
+              </span></button>
+            <button id="view-list" style="padding: 5px;"><span class="material-symbols-outlined" style="right: -5px; top: 4px">
+              menu
+              </span></button>
+          </div>
+          <div id="project-list" class="projects-view card-view list-view"></div>
+    </div>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
